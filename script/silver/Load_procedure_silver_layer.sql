@@ -3,6 +3,7 @@
 -- Description: Cleans and transforms data from the bronze layer tables and loads it into the
 --              corresponding silver layer tables. This includes handling duplicates, standardizing
 --              values, rectifying data errors, and structuring the data for analytical use.
+-- Create Date: 2024-07-23
 -- =================================================================================================
 
 DELIMITER $$
@@ -20,7 +21,7 @@ BEGIN
     -- Note: Assuming silver.crm_cust_info table is pre-created and truncated before run.
     -- For idempotency, you might add a TRUNCATE TABLE statement here.
     -- TRUNCATE TABLE silver.crm_cust_info;
-
+	Truncate Table silver.crm_cust_info;
     INSERT INTO silver.crm_cust_info (
         cst_id,
         cst_key,
@@ -61,7 +62,7 @@ BEGIN
     --              normalizes product lines, handles null costs, and calculates product
     --              end dates before loading into the silver layer.
 
-
+	Truncate Table silver.crm_prd_info;
     INSERT INTO silver.crm_prd_info (
         prd_id,
         cat_id,
@@ -96,7 +97,7 @@ BEGIN
     -- Description: Recreates the sales details table, casts data types, and rectifies
     --              errors in sales and price calculations before loading.
 
-
+	Truncate Table silver.crm_sales_details;
     INSERT INTO silver.crm_sales_details (
         sls_ord_num,
         sls_prd_key,
@@ -137,7 +138,7 @@ BEGIN
 
     -- Note: Assuming silver.erp_cust_az12 is pre-created and truncated.
     -- TRUNCATE TABLE silver.erp_cust_az12;
-
+	Truncate Table silver.erp_cust_az12;
     INSERT INTO silver.erp_cust_az12 (
         cid,
         bdate,
@@ -167,7 +168,7 @@ BEGIN
 
     -- Note: Assuming silver.erp_loc_a101 is pre-created and truncated.
     -- TRUNCATE TABLE silver.erp_loc_a101;
-
+	Truncate Table silver.erp_loc_a101;
     INSERT INTO silver.erp_loc_a101 (
         CID,
         CNTRY
@@ -191,7 +192,7 @@ BEGIN
 
     -- Note: Assuming silver.erp_px_cat_g1v2 is pre-created and truncated.
     -- TRUNCATE TABLE silver.erp_px_cat_g1v2;
-
+	Truncate Table silver.erp_px_cat_g1v2;
     INSERT INTO silver.erp_px_cat_g1v2 (
         id,
         cat,
@@ -210,4 +211,3 @@ END$$
 DELIMITER ;
 
 CALL sp_load_silver_layer;
-
