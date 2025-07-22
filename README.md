@@ -2,7 +2,7 @@
 Welcome to the **Data Warehouse and Analytics Project** repository!
 This project guides you through the end-to-end process of building a modern data warehouse and turning raw data into meaningful insights. It's designed as a hands-on portfolio project based on real-world data engineering and analytics practices.
 
---
+---
 ## Data Architechture.
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 
@@ -12,14 +12,22 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 2. **Silver Layer**: Performs data cleansing, standardization, and normalization to prepare the data for reliable analysis and downstream use.
 3. **Gold Layer**: Contains business-ready data organized in a **star schema**, optimized for reporting, dashboards, and advanced analytics.
 
---
-## Data Architechture.
+---
+## Data Integration Model.
+
 <img width="792" height="617" alt="Image" src="https://github.com/user-attachments/assets/11a9b7a6-2f79-44a1-b678-56600c061c44" />
-## Data Architechture.
+
+---
+## Data Flow Diagram.
+
 <img width="741" height="369" alt="Image" src="https://github.com/user-attachments/assets/a827c33a-468d-45b3-a524-71007e92281d" />
-## Data Architechture.
+
+---
+## Data Marts(Star Schema).
+
 <img width="792" height="472" alt="Image" src="https://github.com/user-attachments/assets/364b3d79-e49c-4f2a-83c7-b7211a50b3e8" />
---
+
+---
 ## 📖 Project Overview
 
 This project covers the full lifecycle of building a data warehouse and delivering business insights:
