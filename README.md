@@ -5,7 +5,13 @@ This project guides you through the end-to-end process of building a modern data
 ---
 ## Data Architechture.
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+
 <img width="856" height="600" alt="Image" src="https://github.com/user-attachments/assets/ece01402-0f90-4f58-bbdd-ce732672fb39" />
+<img width="792" height="617" alt="Image" src="https://github.com/user-attachments/assets/11a9b7a6-2f79-44a1-b678-56600c061c44" />
+
+<img width="741" height="369" alt="Image" src="https://github.com/user-attachments/assets/a827c33a-468d-45b3-a524-71007e92281d" />
+
+<img width="792" height="472" alt="Image" src="https://github.com/user-attachments/assets/364b3d79-e49c-4f2a-83c7-b7211a50b3e8" />
 
 1. **Bronze Layer**: Stores raw data exactly as received from source CSV files. Data is ingested into the **MySQL database** without transformation.
 2. **Silver Layer**: Performs data cleansing, standardization, and normalization to prepare the data for reliable analysis and downstream use.
