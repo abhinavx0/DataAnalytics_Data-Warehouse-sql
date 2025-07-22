@@ -30,8 +30,6 @@ This project covers the full lifecycle of building a data warehouse and deliveri
 * Data Modeling
 * Data Analytics
 
-Sure! Here's a polished and rewritten version of your project requirements, tailored for clarity and professionalism:
-
 ---
 
 ## 🚀 Project Requirements
